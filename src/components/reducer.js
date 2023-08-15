@@ -4,6 +4,7 @@ const initialState = {
   numberOfDoors: 0,
   percentageRental: 0,
   membershipCost: 0,
+  savingsMembership: 0,
   screeningsAndLeases: 0,
 };
 

@@ -1,14 +1,13 @@
 import { connect } from "react-redux";
 import { setInputValues } from "./actions";
 
-const MembershipInput = ({ membershipCost, setInputValues }) => {
+const MembershipInput = ({ setInputValues }) => {
   return (
     <>
       <input
         type="number"
         required
         placeholder="Prix ($)"
-        value={membershipCost}
         onChange={(e) =>
           setInputValues({
             membershipCost: parseFloat(e.target.value),

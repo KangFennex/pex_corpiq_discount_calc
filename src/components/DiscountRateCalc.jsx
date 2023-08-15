@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 
-function DiscountRateCalc({ membershipCost }) {
-  const savingsMembership = membershipCost * 0.1;
+function DiscountRateCalc({ membershipCost, savingsMembership }) {
+  // const savingsMembership = membershipCost * 0.1;
   const total = membershipCost - savingsMembership;
   const totalTax = total * 1.14975;
 
@@ -19,6 +19,7 @@ function DiscountRateCalc({ membershipCost }) {
 }
 const mapStateToProps = (state) => ({
   savingsMembership: state.savingsMembership,
+  membershipCost: state.membershipCost,
 });
 
 export default connect(mapStateToProps)(DiscountRateCalc);

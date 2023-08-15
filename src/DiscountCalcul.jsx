@@ -2,11 +2,11 @@ import "./discountCalcul.css";
 import { connect } from "react-redux";
 import corpiqLogo from "./assets/corpiq logo.png";
 import PEXlogo from "./assets/PEX logo.png";
-import PercentageRental from "./components/PercentageRental";
-import DiscountScreeningsAndLeases from "./components/DiscountScreeningsAndLeases";
 import MembershipInput from "./components/MembershipInput";
 import { setInputValues } from "./components/actions";
 import { ConnectedDiscountRateCalc } from "./components/containerComponents";
+import { ConnectedPercentageRental } from "./components/containerComponents";
+import { ConnectedDiscountScreeningsAndLeases } from "./components/containerComponents";
 
 const DiscountCalcul = ({
   setInputValues,
@@ -67,13 +67,15 @@ const DiscountCalcul = ({
           <div className="bar"></div>
         </div>
         <div className="row input">
-          <PercentageRental
+          <ConnectedPercentageRental
             numberOfDoors={numberOfDoors}
             percentageRental={percentageRental}
           />
         </div>
       </div>
-      <DiscountScreeningsAndLeases savingsMembership={savingsMembership} />
+      <ConnectedDiscountScreeningsAndLeases
+        savingsMembership={savingsMembership}
+      />
     </div>
   );
 };

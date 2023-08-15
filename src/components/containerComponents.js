@@ -2,6 +2,7 @@ import { connect } from "react-redux";
 import { setInputValues } from "./actions";
 import PercentageRental from "./PercentageRental";
 import DiscountRateCalc from "./DiscountRateCalc";
+import DiscountScreeningsAndLeases from "./DiscountScreeningsAndLeases";
 
 const mapStateToProps = (state) => ({
   numberOfDoors: state.numberOfDoors,
@@ -24,3 +25,8 @@ export const ConnectedDiscountRateCalc = connect(
   mapStateToProps,
   mapDispatchToProps
 )(DiscountRateCalc);
+
+export const ConnectedDiscountScreeningsAndLeases = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(DiscountScreeningsAndLeases);

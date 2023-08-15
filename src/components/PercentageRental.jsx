@@ -17,6 +17,7 @@ function PercentageRental({ numberOfDoors, percentageRental }) {
 const mapStateToProps = (state) => ({
   numberOfDoors: state.numberOfDoors,
   percentageRental: state.percentageRental,
+  screeningsAndLeases: state.screeningsAndLeases,
 });
 
 export default connect(mapStateToProps)(PercentageRental);
