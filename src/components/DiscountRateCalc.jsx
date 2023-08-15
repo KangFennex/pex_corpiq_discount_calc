@@ -9,7 +9,7 @@ function DiscountRateCalc({ membershipCost, savingsMembership }) {
     <>
       <div className="amounts">
         <div className="amount">
-          {`Économies: ${savingsMembership.toFixed(2)}`} $
+          {`Rabais: ${savingsMembership.toFixed(2)}`} $
         </div>
         <div className="amount">{`Total: ${total.toFixed(2)}`} $</div>
         <div className="amount">{`Avec-taxes: ${totalTax.toFixed(2)}`} $</div>

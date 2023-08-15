@@ -12,19 +12,24 @@ const DiscountCalcul = ({
   setInputValues,
   numberOfDoors,
   percentageRental,
-  savingsMembership,
 }) => {
   const handleNumberOfDoorsChange = (e) => {
+    const inputValue = e.target.value;
+    const parsedValue = inputValue !== "" ? parseFloat(inputValue) : "";
+
     setInputValues({
-      numberOfDoors: parseFloat(e.target.value),
+      numberOfDoors: parsedValue,
       percentageRental,
     });
   };
 
   const handlePercentageRentalChange = (e) => {
+    const inputValue = e.target.value;
+    const parsedValue = inputValue !== "" ? parseFloat(inputValue) : "";
+
     setInputValues({
       numberOfDoors,
-      percentageRental: parseFloat(e.target.value),
+      percentageRental: parsedValue,
     });
   };
 
@@ -67,15 +72,10 @@ const DiscountCalcul = ({
           <div className="bar"></div>
         </div>
         <div className="row input">
-          <ConnectedPercentageRental
-            numberOfDoors={numberOfDoors}
-            percentageRental={percentageRental}
-          />
+          <ConnectedPercentageRental />
         </div>
       </div>
-      <ConnectedDiscountScreeningsAndLeases
-        savingsMembership={savingsMembership}
-      />
+      <ConnectedDiscountScreeningsAndLeases />
     </div>
   );
 };
